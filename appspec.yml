@@ -4,7 +4,6 @@ files:
   source: /index.html
 hooks: 
   BeforeInstall: 
-    loaction: scripts/install_dependecies
     location: scripts/start_server
     runas: root
     timeout: 300
