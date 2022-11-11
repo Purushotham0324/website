@@ -7,11 +7,12 @@ hooks:
   AfterInstall: 
     - 
       location: scripts/start.sh
+      owner: root
       timeout: 300
   BeforeInstall: 
     - 
       location: scripts/install_dependencies.sh
-      runas: root
+      owner: root
       timeout: 300
 os: linux
 permissions: 
