@@ -1,8 +1,8 @@
 --- 
 files: 
   - 
-    destination: /var/www/
-    source: /
+    destination: /var/www/html
+    source: /index.html
 hooks: 
   AfterInstall: 
     - 
@@ -18,6 +18,6 @@ permissions:
   - 
     group: root
     mode: 777
-    object: /var/www/
+    object: /var/www/html
     owner: root
 version: 0.0
