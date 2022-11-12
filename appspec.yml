@@ -1,20 +1,18 @@
 --- 
 files: 
   - 
-    destination: /var/www/html
-    source: /index.html
+    destination: /var/www/html/
+    source: /index.hml
 hooks: 
   AfterInstall: 
     - 
       location: scripts/start.sh
-      owner: root
-      shell: bash
+      runas: root
       timeout: 300
   BeforeInstall: 
     - 
       location: scripts/install_dependencies.sh
-      owner: root
-      shell: bash
+      runas: root
       timeout: 300
 os: linux
 permissions: 
