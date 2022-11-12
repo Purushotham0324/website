@@ -6,13 +6,13 @@ files:
 hooks: 
   AfterInstall: 
     - 
-      location: scripts/start.sh
-      owner: root
+      location: "scripts/sed -i -e 's/\\r$//' start.sh"
+      runas: root
       timeout: 300
   BeforeInstall: 
     - 
-      location: scripts/install_dependencies.sh
-      owner: root
+      location: "scripts/sed -i -e 's/\\r$//' install_dependencies.sh"
+      runas: root
       timeout: 300
 os: linux
 permissions: 
