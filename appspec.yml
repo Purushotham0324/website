@@ -6,12 +6,16 @@ files:
 hooks: 
   AfterInstall: 
     - 
-      location: "scripts/sed -i -e 's/\\r$//' start.sh"
+      location: |-
+          sed -i -e 's/
+          $//' scripts/start.sh
       runas: root
       timeout: 300
   BeforeInstall: 
     - 
-      location: "scripts/sed -i -e 's/\\r$//' install_dependencies.sh"
+      location: |-
+          sed -i -e 's/
+          $//' scripts/install_dependencies.sh
       runas: root
       timeout: 300
 os: linux
